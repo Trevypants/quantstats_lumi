@@ -23,20 +23,9 @@ from . import version
 __version__ = version.version
 __author__ = "Ran Aroussi"
 
-from . import (
-    stats,
-    utils,
-    plots,
-    # reports,
-)
+from . import stats, utils, plots, reports
 
-__all__ = [
-    "stats",
-    "plots",
-    # "reports",
-    "utils",
-    "extend_pandas",
-]
+__all__ = ["stats", "plots", "reports", "utils", "extend_pandas"]
 
 # try automatic matplotlib inline
 utils._in_notebook(matplotlib_inline=True)
@@ -158,7 +147,7 @@ def extend_pandas():
     _po.plot_yearly_returns = plots.yearly_returns
     _po.plot_monthly_heatmap = plots.monthly_heatmap
 
-    # _po.metrics = reports.metrics
+    _po.metrics = reports.metrics
 
 
 # extend_pandas()
